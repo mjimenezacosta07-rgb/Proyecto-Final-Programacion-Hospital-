@@ -128,7 +128,7 @@ NodoDepartamento* ListaDepartamentos::getPrimero() {
 //por si no hay ningun departamento aun registrado y tira un ligero error que es el error de no encontrar algo 
 string ListaDepartamentos::toString() {
 	if (estaVacia()) {
-		return "No hay departamentos registrados ERROR 404 \n";
+		return "No hay departamentos registrados.\n";
 	}
 	stringstream s;
 	NodoDepartamento* actual = primero;
