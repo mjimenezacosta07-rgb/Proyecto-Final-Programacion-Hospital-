@@ -9,7 +9,7 @@
 
 
 
-// aca se hace una implementacion osea aca se guardan y carga los empleados en un archivo de texto plano
+// Aca se hace una implementacion o sea aca se guardan y carga los empleados en un archivo de texto plano
 //cada empleado ocupa 8 lineas en orden: tipo, cedula, nombre, departamento, salario, horas extra, dato propio(especialidad, area, oficina
 // y la cantidad del bono 
 

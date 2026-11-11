@@ -3,7 +3,7 @@
 
 
 
-// aca se guarda cada departamento, cuantos puestos tiene y luego esos puestos, al cargar ese numero civce cuantas veces repetir 
+// Aca se guarda cada departamento, cuantos puestos tiene y luego esos puestos, al cargar ese numero dice cuantas veces repetir 
 //el guardado 
 
 
@@ -37,7 +37,7 @@ void ArchivoDepartamentos::cargar(ListaDepartamentos* lista) {
 		Departamento* d = new Departamento(codigo, nombre);
 		
 		
-		// los puestos los crea el departamento osea hacemos una composicion 
+		// los puestos los crea el departamento o sea hacemos una composicion 
 		for (int i = 0; i < cantidadPuestos; i++) {
 			getline(archivo, nombrePuesto);
 			getline(archivo, linea);

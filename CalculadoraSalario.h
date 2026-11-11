@@ -2,7 +2,7 @@
 #define CALCULADORASALARIO_H
 #include "ComprobantePago.h"
 
-//esta parte la calculadora.h es lo que por asi decirlo la calculadora deve de saber osea solo declara aca no se calcula nada todava 
+//Esta parte la calculadora.h es lo que por asi decirlo la calculadora debe de saber o sea solo declara aca no se calcula nada todavia 
 //solos e conoce empleado en general pero no al medico enfermero o administrativo, esto se hace asi porque si se nos ocurre agregar un 
 //nuevo tipo de empleado este archivo no se toca 
 

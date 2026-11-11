@@ -5,7 +5,7 @@
 #include <sstream>
 using namespace std;
 
-//aca se declaran los metodos que vamos a usar para pedir los datos correspondientes osea el texto, los decimales,periodo , si o no 
+//Aca se declaran los metodos que vamos a usar para pedir los datos correspondientes o sea el texto, los decimales,periodo , si o no 
 //y el pausar
 
 

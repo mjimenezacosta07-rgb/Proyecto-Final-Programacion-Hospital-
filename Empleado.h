@@ -6,7 +6,7 @@
 using namespace std;
 
 
-//empleado es abstracto ya que tiene medotods virtuales puros osea = 0 por eso no se le puede 
+//Empleado es abstracto ya que tiene metodos virtuales puros o sea = 0 por eso no se le puede 
 //hacer un new empleado 
 
 
@@ -27,7 +27,7 @@ private:
 public:
 	//el constructor
 	Empleado (string ced, string nom, string codDep, double salario);
-	//virtuyal, al hacer el delete a un empelado con el * se ejecuta primero el destructor de la clase hija y luego este 
+	//virtual, al hacer el delete a un empleado con el * se ejecuta primero el destructor de la clase hija y luego este 
 	
 	virtual ~Empleado();
 	
@@ -51,9 +51,9 @@ public:
 	
 	
 	
-	//aca van los metodos de cada clase osea lo que hace cada empleado a su manera (el polimorfismo)
+	//aca van los metodos de cada clase o sea lo que hace cada empleado a su manera (el polimorfismo)
 	
-	virtual string getTipo() = 0;    //MEDIO ENFERMERO Y ADMINISTRATIVO
+	virtual string getTipo() = 0;    //MEDICO ENFERMERO Y ADMINISTRATIVO
 	virtual string getDatoPropio() = 0;     // especialidad, su area o oficina
 	virtual string getNombreBono() = 0;     //guardias o los turnos nocturnos 
 	virtual int getCantidadBono() = 0;     // cuantas guardias, turnos etc tiene la persona 

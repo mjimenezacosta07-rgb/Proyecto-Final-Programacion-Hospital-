@@ -2,7 +2,7 @@
 
 
 
-// se programan las mismas operaciones que en departamentos pero buscando por cedula, ademas agregamos una nueva funcion 
+// Se programan las mismas operaciones que en departamentos pero buscando por cedula, ademas agregamos una nueva funcion 
 //la cual es hayEmpleadosEn que recibe el codigo de un departamento y revisa si algun empleado trabaja en el 
 //solo dice si esta ocupado, no dice por quien 
 
@@ -19,7 +19,7 @@ ListaEmpleados::~ListaEmpleados() {
 	NodoEmpleado* actual = primero;
 	while (actual != NULL) {
 		NodoEmpleado* siguiente = actual->getSiguiente();
-		//delete con un Empleado* osea un puntero como es un destructor virtual se libera aunque el objeto sea un medico o un enfermero etc 
+		//delete con un Empleado* o sea un puntero como es un destructor virtual se libera aunque el objeto sea un medico o un enfermero etc 
 		delete actual->getDato();
 		delete actual;
 		actual = siguiente;
@@ -51,7 +51,7 @@ int ListaEmpleados::contar() {
 
 
 
-//hace lo que hicimos en Lista Departa,meto nadamas que con un empleado para agregar otro al vagon 
+//hace lo que hicimos en Lista Departamento nada mas que con un empleado para agregar otro al vagon 
 void ListaEmpleados::insertarFinal(Empleado* e) {
 	NodoEmpleado* nuevo = new NodoEmpleado(e);
 	if (primero == NULL) {
@@ -154,7 +154,7 @@ string ListaEmpleados::toString() {
 		
 		
 		
-		// toString() es virtual osea cada objeto usa la versión de su clase
+		// toString() es virtual o sea cada objeto usa la versión de su clase
 		s << actual->getDato()->toString() << "------------------------" << endl;
 		actual = actual->getSiguiente();
 	}

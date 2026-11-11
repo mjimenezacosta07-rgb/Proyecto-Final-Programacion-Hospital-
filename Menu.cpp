@@ -1,16 +1,16 @@
 #include "Menu.h"
-//El codigo mas largo y mas importante del porgrama, aca se toiman toods los datos del usuario y se regresan los datos especificos
-//para cada consulta, es importante y muy indispensable cubrir cada hueco para que la persona no pueda dijitar algo mal o se le devuelva
-//en caso de que dijite algo incorrecto
+//El codigo mas largo y mas importante del programa, aca se toman todos los datos del usuario y se regresan los datos especificos
+//para cada consulta, es importante y muy indispensable cubrir cada hueco para que la persona no pueda digitar algo mal o se le devuelva
+//en caso de que digite algo incorrecto
 //que a la hora de entrar datos es bastante comun 
-// y ademas se utiliza a la ENTRADA.cpp para que esta misma devuelva en caso de dijitar algo mal se le llama varias veces ya que las de la 
-//entrada se usan en varias partes, se crearon varias con doble uso osea varios punteros porque hay varias ocaciones que se ingrean 
-//mismos datos entonces hay que llamarlas varias veces un ejemplo si dijita mal la cedula en empleaods  y en departamento llama a la misma 
+// y ademas se utiliza a la ENTRADA.cpp para que esta misma devuelva en caso de digitar algo mal se le llama varias veces ya que las de la 
+//entrada se usan en varias partes, se crearon varias con doble uso o sea varios punteros porque hay varias ocasiones que se ingresan 
+//mismos datos entonces hay que llamarlas varias veces un ejemplo si digita mal la cedula en empleados  y en departamento llama a la misma 
 //funcion que comprueba la cedula y le muestra error 
 
 
-//aca se utilizo GUIA de CLAUDE porque el nivel de cuidado que hbia que tneer en esta parte para cubrir todas las posibilidades 
-//de esta parte ya que es bastante importante, sirvio de guia en la mayoria de esta parte especialmenmte por su dificultal al intentar conectar 
+//aca se utilizo GUIA de CLAUDE porque el nivel de cuidado que habia que tener en esta parte para cubrir todas las posibilidades 
+//de esta parte ya que es bastante importante, sirvio de guia en la mayoria de esta parte especialmente por su dificultad al intentar conectar 
 //cada punto del programa sin dejar algo colgando o sin utilizar, o que no haya un desbordamiento por no cuidar
 //un posible error de escritura de las personas que lleguen 
 //a utilizar el programa, fue de importante ayuda en esta parte mas que en ningun otra 
@@ -41,7 +41,7 @@ Menu::~Menu() {
 
 
 // MENU PRINCIPAL=====================
-//se utiliza un sistema de switch simple con el wile para salir y bueno es un sistema switch con opciones 
+//se utiliza un sistema de switch simple con el while para salir y bueno es un sistema switch con opciones 
 void Menu::iniciar() {
 	int opcion;
 	do {
@@ -110,7 +110,7 @@ void Menu::agregarDepartamento() {
 
 
 //es el menu de agregar puesto aca le dice ejemplo si el comete error al escribir le dice que no existe 
-//luego de eso le rpegunta nombre del puesto, la cantidad de plazas, y le dice donde fue agregado 
+//luego de eso le pregunta nombre del puesto, la cantidad de plazas, y le dice donde fue agregado 
 
 //en caso de error al preguntarle cual agregar se le tira un mensaje de error 
 void Menu::agregarPuesto() {
@@ -134,7 +134,7 @@ void Menu::agregarPuesto() {
 
 
 //menu para eliminar un puesto aca se pide el codigo del departamento 
-//si no existe tira error  luego pide el nombre extacto del puesto para eliminar, esto se relaciona con el sistema de antes
+//si no existe tira error  luego pide el nombre exacto del puesto para eliminar, esto se relaciona con el sistema de antes
 //si el puesto no existe te lo dice, aca no se revisa si tiene personas porque los empleados no guardan su puesto 
 
 void Menu::eliminarPuesto() {
@@ -153,11 +153,11 @@ void Menu::eliminarPuesto() {
 }
 
 
-//para eliminar un departamento aca es lo mismo que con puesto nadamas que para eliminar uno tiene que 
-//asagurarse que no haya ningun empleado en el o un comporbante en el obvio porque 
-// un comporbante que tiene datos importantes no podemos eliminarlo a la ligera 
-//en el si no lo hay se elimina, ademas denuevo la misma logica, pide el coodigo del Departamento
-//a eliminar su lo dijita mal le dice que no existe y ademas le pregunta que si quiere eliminarlo de verdad ya que 
+//para eliminar un departamento aca es lo mismo que con puesto nada mas que para eliminar uno tiene que 
+//asegurarse que no haya ningun empleado en el o un comprobante en el obvio porque 
+// un comprobante que tiene datos importantes no podemos eliminarlo a la ligera 
+//en el si no lo hay se elimina, ademas de nuevo la misma logica, pide el codigo del Departamento
+//a eliminar su lo digita mal le dice que no existe y ademas le pregunta que si quiere eliminarlo de verdad ya que 
 //es importante y para asegurarse que no este cometiendo un error al querer eliminar algo 
 void Menu::eliminarDepartamento() {
 	string codigo = entrada->leerTexto("Código del departamento a eliminar: ");
@@ -207,12 +207,12 @@ void Menu::menuEmpleados() {
 
 
 
-// aqui se decide que tipo de objeto se va a crear osea se guarda en un empleado con punteros hacia su clase base y desde ahi
-//el sistema lo tarta igual 
+// aqui se decide que tipo de objeto se va a crear o sea se guarda en un empleado con punteros hacia su clase base y desde ahi
+//el sistema lo trata igual 
 
 
 
-//menu de registrra emplkeado con sus distintos casos y tipos de empleado al regustrarse 
+//menu de registrar empleado con sus distintos casos y tipos de empleado al registrarse 
 void Menu::registrarEmpleado() {
 	if (!sistema->hayDepartamentos()) {
 		cout << "Primero debe registrar al menos un departamento." << endl;
@@ -227,7 +227,7 @@ void Menu::registrarEmpleado() {
 		cout << "Error: ya existe un empleado con esa cédula." << endl;
 		return;
 	}
-	//se pide el nombre y el codigo de departaento y si se dijita un departamento que no existe tira error 
+	//se pide el nombre y el codigo de departamento y si se digita un departamento que no existe tira error 
 	string nombre = entrada->leerTexto("Nombre completo: ");
 	cout << endl << sistema->listarDepartamentos();
 	string codigo = entrada->leerTexto("Código del departamento: ");
@@ -254,12 +254,12 @@ void Menu::registrarEmpleado() {
 		break;
 	}
 	
-	//al queerr registrar un empleado nuevo y en caso de que falle al registrarlo te lo dice 
+	//al querer registrar un empleado nuevo y en caso de que falle al registrarlo te lo dice 
 	if (sistema->agregarEmpleado(nuevo)) {
 		cout << "Empleado registrado." << endl;
 	} else {
 		cout << "Error: no se pudo registrar el empleado." << endl;
-		delete nuevo; // como no se agregoi a la lista se libera aca 
+		delete nuevo; // como no se agrego a la lista se libera aca 
 	}
 }
 
@@ -278,9 +278,9 @@ void Menu::consultarEmpleado() {
 
 
 //en caso de querer modificar a un empleado se pide la cedula del empleado, en caso que no exista te lo dice y vuelve a pedir en menu
-//luego te dice que dijite los datos nuevos en caso de querere modificarlo y agregar la cedula bien,
-//te pide que dijite los datos nuevos como el nombre completo,
-//el codigo del departamento y en caso de dijitarlos mal el departamento te dice que no existe ese departamento, y no hace ningun cambio
+//luego te dice que digite los datos nuevos en caso de querer modificarlo y agregar la cedula bien,
+//te pide que digite los datos nuevos como el nombre completo,
+//el codigo del departamento y en caso de digitarlos mal el departamento te dice que no existe ese departamento, y no hace ningun cambio
  
 void Menu::modificarEmpleado() {
 	string cedula = entrada->leerTexto("Cedula del empleado: ");
@@ -305,8 +305,8 @@ void Menu::modificarEmpleado() {
 }
 
 
-//en casoi de querer registrar alguna hora erxtra o alguna novedad se entra aca, primero pide la cedula
-//si la cedula es correcta pasa y si no tira un error y lo devuelve al menu para que la ingrese denuevo 
+//en caso de querer registrar alguna hora extra o alguna novedad se entra aca, primero pide la cedula
+//si la cedula es correcta pasa y si no tira un error y lo devuelve al menu para que la ingrese de nuevo 
 
 void Menu::registrarNovedades() {
 	string cedula = entrada->leerTexto("Cédula del empleado: ");
@@ -317,7 +317,7 @@ void Menu::registrarNovedades() {
 	}
 	cout << "Empleado: " << e->getNombre() << " (" << e->getTipo() << ")" << endl;
 	int horas = entrada->leerEntero("Horas extra del mes: ", 0, MAXIMO_HORAS_EXTRA);
-	//aca el getnombrebono() es virtual osea pregunta las guardias los turnos nocturnos o los feriados de la persona sin usar if
+	//aca el getnombrebono() es virtual o sea pregunta las guardias los turnos nocturnos o los feriados de la persona sin usar if
 	
 	int cantidad = entrada->leerEntero("Cantidad de " + e->getNombreBono() + ": ", 0, MAXIMO_BONOS);
 	sistema->registrarNovedades(cedula, horas, cantidad);
@@ -333,11 +333,11 @@ void Menu::eliminarEmpleado() {
 	if (e == NULL) {
 		cout << "No existe un empleado con esa cedula." << endl;
 		return;
-	}//si la persona tiene algun comporbante de pago, pendiente o pagado, te lo dice y no deja eliminarlo 
+	}//si la persona tiene algun comprobante de pago, pendiente o pagado, te lo dice y no deja eliminarlo 
 	if (sistema->tieneComprobantes(cedula)) {
 		cout << "No se puede eliminar: tiene comprobantes de pago en la planilla." << endl;
 		return;
-	}//luego si no tiene comprobantes y esta avacable te pregunta de crdad si quieres eliminarlo o es un error y te muestra la cedula del 
+	}//luego si no tiene comprobantes y esta avacable te pregunta de verdad si quieres eliminarlo o es un error y te muestra la cedula del 
 	//que quieres eliminar, si todo es correcto se elimina correctamente 
 	if (entrada->leerSiNo("¿Seguro que desea eliminar a " + e->getNombre() + "?")) {
 		sistema->eliminarEmpleado(cedula);
@@ -347,7 +347,7 @@ void Menu::eliminarEmpleado() {
 
 //ACA SE HACEN LAS PLANILLAS=========================
 
-//switch para las planillas calcular periodos de planillas comprobantes listas de comporbantes pagos porcesar pagos
+//switch para las planillas calcular periodos de planillas comprobantes listas de comprobantes pagos procesar pagos
 //resumen de periodo 
 void Menu::menuPlanilla() {
 	int opcion;
@@ -373,8 +373,8 @@ void Menu::menuPlanilla() {
 }
 
 
-//aca se calcula la planilla por periodo usando la fecha, compueba si se puede generar o si todos ya tienenn tienen generados 
-//te dice los comporbantes y si se genera correctamente dice para quien se genera y para que periodo se aplico 
+//aca se calcula la planilla por periodo usando la fecha, comprueba si se puede generar o si todos ya tienen generados 
+//te dice los comprobantes y si se genera correctamente dice para quien se genera y para que periodo se aplico 
 
 void Menu::calcularPlanilla() {
 	string periodo = entrada->leerPeriodo("Periodo (AAAA-MM): ");
@@ -387,8 +387,8 @@ void Menu::calcularPlanilla() {
 	}
 }
 
-//aca se puede ver los comporbantes y los numeros de comporbantes correspondientes para cada persona osea se le pide el numero
-//del comprobante si la eprsona es correcta te lo dice y si ingresa dato erroneo te tira que no existe 
+//aca se puede ver los comprobantes y los numeros de comprobantes correspondientes para cada persona o sea se le pide el numero
+//del comprobante si la persona es correcta te lo dice y si ingresa dato erroneo te tira que no existe 
 
 void Menu::verComprobante() {
 	int numero = entrada->leerEntero("Numero de comprobante: ", 1, 1000000);
@@ -402,8 +402,8 @@ void Menu::verComprobante() {
 }
 
 
-//aca se porcesa el pago por el numero del comprobante y lo que hya que pagar, en caso de ingresra un dato erroneo te lo dice y vuelve a intentar
-//en caso de que ya este pagado te lo dice y si no lo estaba te procesa el pago y te dice pago procesdado cuando ya se completa
+//aca se procesa el pago por el numero del comprobante y lo que hay que pagar, en caso de ingresar un dato erroneo te lo dice y vuelve a intentar
+//en caso de que ya este pagado te lo dice y si no lo estaba te procesa el pago y te dice pago procesado cuando ya se completa
 
 void Menu::procesarPago() {
 	int numero = entrada->leerEntero("Numero de comprobante a pagar: ", 1, 1000000);
@@ -423,7 +423,7 @@ void Menu::procesarPagosPeriodo() {
 	int pagados = sistema->procesarPagosPeriodo(periodo);
 	cout << "Se procesaron " << pagados << " pagos." << endl;
 }
-//el remuen de los pagos del periodo 
+//el resumen de los pagos del periodo 
 void Menu::resumenPeriodo() {
 	string periodo = entrada->leerPeriodo("Periodo (AAAA-MM): ");
 	cout << endl << sistema->resumenPeriodo(periodo);

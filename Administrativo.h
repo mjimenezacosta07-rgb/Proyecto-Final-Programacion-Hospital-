@@ -2,7 +2,7 @@
 #define ADMINISTRATIVO_H
 #include "Empleado.h"
 
-//se calcula su aumento dependiendo de cuanto gana el estimado 
+//Se calcula su aumento dependiendo de cuanto gana el estimado 
 //cada feriado se paga un dia extra pero administrativo es un empleado mas 
 
 

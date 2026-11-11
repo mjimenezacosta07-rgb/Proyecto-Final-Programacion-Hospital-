@@ -4,8 +4,8 @@
 
 
 
-//aca se GUARDAN cada empleado en 8 lineas al cargar, lee el tipo y crea un MEDICO, enfermero o administrativo, segun lo que se este 
-//nesecitando en cada caso 
+//Aca se GUARDAN cada empleado en 8 lineas al cargar, lee el tipo y crea un MEDICO, enfermero o administrativo, segun lo que se este 
+//necesitando en cada caso 
 
 
 ArchivoEmpleados::ArchivoEmpleados(string nombre) {
@@ -18,9 +18,9 @@ ArchivoEmpleados::ArchivoEmpleados(string nombre) {
 ArchivoEmpleados::~ArchivoEmpleados() {
 }
 
-// Lee el archivo línea por línea y crea el objeto del tipo correct
+// Lee el archivo línea por línea y crea el objeto del tipo correcto
 // Se usa getline (y no >>) porque los nombres tienen espacios entre ellos 
-//sino no nos darian 
+//si no no nos darian 
 
 
 void ArchivoEmpleados::cargar(ListaEmpleados* lista) {
@@ -51,7 +51,7 @@ void ArchivoEmpleados::cargar(ListaEmpleados* lista) {
 		
 		
 		
-		// Aqui sí hay que preguntar el tipo osea es el único lugar donde
+		// Aqui sí hay que preguntar el tipo o sea es el único lugar donde
 		// se decide cual clase crear a partir del texto del archivo que nos dan 
 		
 		Empleado* e = NULL;
@@ -73,7 +73,7 @@ void ArchivoEmpleados::cargar(ListaEmpleados* lista) {
 
 
 
-//rescrive eñ crachivo completo con lo que hay en cada lista, para guardar no se pregunat el tipo osea cada objeto responde por si 
+//reescribe el archivo completo con lo que hay en cada lista, para guardar no se pregunta el tipo o sea cada objeto responde por si 
 //mismo gracias a los metodos virtuales que se emplean que son por ejemplo el getTipo getDatoPropio etc...
 
 

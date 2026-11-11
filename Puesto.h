@@ -4,7 +4,7 @@
 #include <sstream>
 using namespace std;
 
-// un puesto por ejemplo el de medico de emergencias y 4 plazas mas solo eciste en una parte de la composicion 
+// Un puesto por ejemplo el de medico de emergencias y 4 plazas mas solo existe en una parte de la composicion 
 
 class Puesto {
 private:

@@ -3,9 +3,9 @@
 #include "Empleado.h"
 
 
-// esta es la capa de medico, medico es un empleado osea es una herencia publica y su bonificacion sale de la cantidad de guardias
+// Esta es la capa de medico, medico es un empleado o sea es una herencia publica y su bonificacion sale de la cantidad de guardias
 //que hace al mes 
-//el class Medif
+//el class Medico
 class Medico : public Empleado {
 private:
 	string especialidad;
@@ -21,7 +21,7 @@ public:
 	
 	
 	//los set y get del medico 
-	//los override es como una red de seguridad si nos equivocamos al dijitar el sistema nos avisa del error 
+	//los override es como una red de seguridad si nos equivocamos al digitar el sistema nos avisa del error 
 	
 	string getTipo() override;
 	

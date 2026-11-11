@@ -2,8 +2,8 @@
 #define NODODEPARTAMENTO_H
 #include "Departamento.h"
 
-// aca declaramos como cada vagon del tren osea el qie guarda Departamento+ y el siguiente 
-//con suss respectivos metodos set y los get 
+// Aca declaramos como cada vagon del tren o sea el que guarda Departamento+ y el siguiente 
+//con sus respectivos metodos set y los get 
 class NodoDepartamento {
 private:
 	Departamento* dato;

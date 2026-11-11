@@ -4,7 +4,7 @@
 #include "ListaEmpleados.h"
 #include "ListaDepartamentos.h"
 
-//se usa solo para los comprobantes y su cartga recibe 3 listas 
+//Se usa solo para los comprobantes y su carga recibe 3 listas 
 //porque este abarca los buscar empleados y departamentos ademas de el mismo 
 
 

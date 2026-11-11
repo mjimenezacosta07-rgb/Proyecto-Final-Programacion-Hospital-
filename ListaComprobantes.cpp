@@ -1,17 +1,17 @@
 #include "ListaComprobantes.h"
-// aca se porgraman las operaciones del tren los comporbantes osea de comporbante pagoh y cpp despies nodo comporbante h y cpp 
-// lo que hace mas que todo osea se integra con las antes mencionadas perro como tal se calcula el comporbante en ellas 
+// Aca se programan las operaciones del tren los comprobantes o sea de comprobante pago h y cpp despues nodo comprobante h y cpp 
+// lo que hace mas que todo o sea se integra con las antes mencionadas pero como tal se calcula el comprobante en ellas 
 //aca lo que se hacen son otras cosas como: insertar al final, buscar por numero, borrar comprobantes al cerrarse pero NO borra 
-//a los empleados, es obvio que no los va a borrar con ele jeemplo que dijimos antes osea, si borras un recibo no vas a borrar el 
+//a los empleados, es obvio que no los va a borrar con el ejemplo que dijimos antes o sea, si borras un recibo no vas a borrar el 
 //local que te lo dio o las mismas cosas que compraste, ademas usa estos 4 metodos nuevos 
-//existeComprobante: esto evita que se haca un doble cobro al mes
-//hayComprobanteDe: dice si un empleado tiene comprobantes, para no dejar borrarlo
+//existeComprobante: esto evita que se haga un doble cobro al mes
+//hayComprobantesDe: dice si un empleado tiene comprobantes, para no dejar borrarlo
 //hayComprobantesEn: dice si un departamento tiene comprobantes, para no dejar borrarlo 
 //mayorNumero: da el numero del comprobante siguiente 
 
 
 //le pedi ayuda a claude que me diera una indicacion de ayuda de como podia estructurarlo porque me perdi un poco al elaborarlo 
-// ya que algunas veces dejaba sin curbiri algunos huecos que podrian perjudicar el sistema 
+// ya que algunas veces dejaba sin cubrir algunos huecos que podrian perjudicar el sistema 
 
 
 ListaComprobantes::ListaComprobantes() {
@@ -171,7 +171,7 @@ NodoComprobante* ListaComprobantes::getPrimero() {
 
 
 
-//si no encuentra comporbantes en el sistema 
+//si no encuentra comprobantes en el sistema 
 
 string ListaComprobantes::toString() {
 	if (estaVacia()) {

@@ -1,13 +1,13 @@
 #include "SistemaPlanilla.h"
 
-//en esta parte Claude me ayudo a estructurarlos ya que era muchas cosas por cordinar y a veces se me escapaban algunas entonces 
-//me fue de ayuda para ayudarme a cordinar mejor el proyecto y buscar errores en la escrituda del codigo y ponerlos bien 
+//En esta parte Claude me ayudo a estructurarlos ya que era muchas cosas por coordinar y a veces se me escapaban algunas entonces 
+//me fue de ayuda para ayudarme a coordinar mejor el proyecto y buscar errores en la escritura del codigo y ponerlos bien 
 
 
-//al empezar se crean las listas vacias y se llenan desde los armacenes, el orden importa: los comporbantes cse cargarn de ultimo 
-//porque nesecitan encontrar a su empkeado y su departamento, no ttendria sentido pionerlo de primro ya que no tendria que buscar
+//al empezar se crean las listas vacias y se llenan desde los almacenes, el orden importa: los comprobantes se cargan de ultimo 
+//porque necesitan encontrar a su empleado y su departamento, no tendria sentido ponerlo de primero ya que no tendria que buscar
 
-//aca se programa estos metodos: agregar, modificar, eliminar, calcular la planilla y porcesar pagos 
+//aca se programa estos metodos: agregar, modificar, eliminar, calcular la planilla y procesar pagos 
 
 
 
@@ -32,9 +32,9 @@ SistemaPlanilla::SistemaPlanilla(AlmacenEmpleados* ae, AlmacenDepartamentos* ad,
 
 
 
-//aca se destruyen las llineas en orden inverso osea primero los comporbantes estos los que apuntan a empleado y departamentos, y despues
-//lo demas osea los almacenes y la calculadora no se borran aca eso es en susu propios lugares 
-//y adems no se borran aca porque los crea el main cuando se ejecuta el codigo 
+//aca se destruyen las listas en orden inverso o sea primero los comprobantes estos los que apuntan a empleado y departamentos, y despues
+//lo demas o sea los almacenes y la calculadora no se borran aca eso es en sus propios lugares 
+//y ademas no se borran aca porque los crea el main cuando se ejecuta el codigo 
 
 
 SistemaPlanilla::~SistemaPlanilla() {
@@ -78,7 +78,7 @@ bool SistemaPlanilla::agregarDepartamento(string codigo, string nombre) {
 
 
 
-//aca se ven los puestos y se depermina si existia o no con un if 
+//aca se ven los puestos y se determina si existia o no con un if 
 bool SistemaPlanilla::agregarPuesto(string codigoDep, string nombrePuesto, int plazas) {
 	Departamento* d = departamentos->buscar(codigoDep);
 	if (d == NULL) {
@@ -116,7 +116,7 @@ bool SistemaPlanilla::puedeEliminarDepartamento(string codigo) {
 
 
 
-//aca se elimina el departamento y de compureba si nadie depende de el en la parte anterior 
+//aca se elimina el departamento y de comprueba si nadie depende de el en la parte anterior 
 bool SistemaPlanilla::eliminarDepartamento(string codigo) {
 	if (!puedeEliminarDepartamento(codigo)) {
 		return false;
@@ -156,7 +156,7 @@ Empleado* SistemaPlanilla::buscarEmpleado(string cedula) {
 
 
 
-//aca recibe un empleado con un puntero que puede ser cualquier tipo de empleado si devuelve flase, quien lo creo debe hacer
+//aca recibe un empleado con un puntero que puede ser cualquier tipo de empleado si devuelve false, quien lo creo debe hacer
 //el delete
 
 
@@ -190,14 +190,14 @@ bool SistemaPlanilla::modificarEmpleado(string cedula, string nombre, string cod
 	return true;
 }
 
-// aca se hacen las novedades osea lo que cambia cada mes con diferencias osea las horas extra y guardias/turnos/feriados 
+// aca se hacen las novedades o sea lo que cambia cada mes con diferencias o sea las horas extra y guardias/turnos/feriados 
 bool SistemaPlanilla::registrarNovedades(string cedula, int horasExtra, int cantidadBono) {
 	Empleado* e = empleados->buscar(cedula);
 	if (e == NULL) {
 		return false;
 	}
 	e->setHorasExtra(horasExtra);
-	e->setCantidadBono(cantidadBono); //este es un metodo virtual osea cada tipo guarda lo suyo 
+	e->setCantidadBono(cantidadBono); //este es un metodo virtual o sea cada tipo guarda lo suyo 
 	guardarTodo();
 	return true;
 }
@@ -209,7 +209,7 @@ bool SistemaPlanilla::tieneComprobantes(string cedula) {
 	return comprobantes->hayComprobantesDe(cedula);
 }
 
-//no se deja borrar a alguien con comprobantes osea esos comporbantes quedarian apuntando a memoria liberada osea se quedarian 
+//no se deja borrar a alguien con comprobantes o sea esos comprobantes quedarian apuntando a memoria liberada o sea se quedarian 
 //en punteros colgantes 
 
 bool SistemaPlanilla::eliminarEmpleado(string cedula) {
@@ -235,8 +235,8 @@ string SistemaPlanilla::listarEmpleados() {
 
 // ACA SE HACE LA PLANILLA 
 
-//se genera un comporbante por cada empleado que todavia no tenga alguno creado y en este periodo aqui se ve el polimorfismo
-//osea se recorre la lista tratando a todos como un empkeado con punteros y no se pregunta el tipo eso de hace despues 
+//se genera un comprobante por cada empleado que todavia no tenga alguno creado y en este periodo aqui se ve el polimorfismo
+//o sea se recorre la lista tratando a todos como un empleado con punteros y no se pregunta el tipo eso de hace despues 
 
 int SistemaPlanilla::calcularPlanilla(string periodo) {
 	int creados = 0;
@@ -285,7 +285,7 @@ bool SistemaPlanilla::procesarPago(int numero) {
 
 
 
-//se procesan los pagos del peridoo de cada uno osea se procesan los apgos e indica pagado si ya se completo 
+//se procesan los pagos del periodo de cada uno o sea se procesan los pagos e indica pagado si ya se completo 
 int SistemaPlanilla::procesarPagosPeriodo(string periodo) {
 	int pagados = 0;
 	NodoComprobante* actual = comprobantes->getPrimero();
@@ -304,14 +304,14 @@ int SistemaPlanilla::procesarPagosPeriodo(string periodo) {
 }
 
 
-//e hace una revisionde comprobantes en lista 
+//e hace una revision de comprobantes en lista 
 string SistemaPlanilla::listarComprobantes() {
 	return comprobantes->toString();
 }
 
 
 
-// Aca se suma todos los montos de los comporbantes de los periodos 
+// Aca se suma todos los montos de los comprobantes de los periodos 
 
 
 string SistemaPlanilla::resumenPeriodo(string periodo) {
@@ -336,7 +336,7 @@ string SistemaPlanilla::resumenPeriodo(string periodo) {
 	
 	
 	
-	//la parte que se muestra si no hay comporbante y los resumenes de las planilla
+	//la parte que se muestra si no hay comprobante y los resumenes de las planilla
 	stringstream s;
 	s << fixed << setprecision(2);
 	if (cantidad == 0) {

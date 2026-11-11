@@ -2,7 +2,7 @@
 #define LISTAPUESTOS_H
 #include "NodoPuesto.h"
 
-// lista implemente enlazalos puestos y la lista es como la que es dueña de los puestos y los administra ella destruye borra nodos 
+// Lista simplemente enlaza los puestos y la lista es como la que es dueña de los puestos y los administra ella destruye borra nodos 
 //y tambien los puestos 
 class ListaPuestos {
 private:

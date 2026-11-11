@@ -3,8 +3,8 @@
 #include <fstream>
 #include "AlmacenPlanilla.h"
 
-// aca se da una implementacion concreta osea cada comprobante ocupa 13 lineas y estan organizadas tal que asi:
-//numero, periodo, cedula, codigo de departamento, horas extra, cantidad del bono, salario basde, monto de horas extra,
+// Aca se da una implementacion concreta o sea cada comprobante ocupa 13 lineas y estan organizadas tal que asi:
+//numero, periodo, cedula, codigo de departamento, horas extra, cantidad del bono, salario base, monto de horas extra,
 //bonificacion, deduccion salud 
 
 

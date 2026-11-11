@@ -5,13 +5,13 @@
 #include "AlmacenPlanilla.h"
 #include "CalculadoraSalario.h"
 
-//aca en esta capa es por ais decirlo el controlador, aca esto cordina todo listas en memoria, la calculadora,
-//los almacenes. las 3 listas son suas osea crea y las destruye eso es una composicion,
-//los almacenes y la calculadora llegan poniendolos desde el main por medio del constructor osea inyeccion de dependencias 
-// splo conoce sus clases abstractas, no si por detras hay archivos txt u otra cosa en el, aca no se usa cin ni cout 
-//lo que devuelve es bool, numeros o textos paraque la vista del menu decida que mostrar,
+//Aca en esta capa es por asi decirlo el controlador, aca esto coordina todo listas en memoria, la calculadora,
+//los almacenes. las 3 listas son suyas o sea crea y las destruye eso es una composicion,
+//los almacenes y la calculadora llegan poniendolos desde el main por medio del constructor o sea inyeccion de dependencias 
+// solo conoce sus clases abstractas, no si por detras hay archivos txt u otra cosa en el, aca no se usa cin ni cout 
+//lo que devuelve es bool, numeros o textos para que la vista del menu decida que mostrar,
 
-//dice que tiene la clase por dentro osea las 3 listas 3 almacenes y la calculadora y tambien declara todos sus metodos 
+//dice que tiene la clase por dentro o sea las 3 listas 3 almacenes y la calculadora y tambien declara todos sus metodos 
 
 
 

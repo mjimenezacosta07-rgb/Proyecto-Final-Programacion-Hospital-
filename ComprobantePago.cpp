@@ -1,7 +1,7 @@
 #include "ComprobantePago.h"
-//en esta parte empeieza todos los montos en 0 y guardan los que le pasan osea calcula en bruto, deduccion y el neto y arma el recibo completo
+//En esta parte empieza todos los montos en 0 y guardan los que le pasan o sea calcula en bruto, deduccion y el neto y arma el recibo completo
 //con todo lo declarado anteriormente en el comprobantePago.h aca se hacen los calculos y arma el comprobante de la persona 
-// y su destructor va vacio porque el empleado no va en el osea esto es el fenomeno de agregacion 
+// y su destructor va vacio porque el empleado no va en el o sea esto es el fenomeno de agregacion 
 
 
 ComprobantePago::ComprobantePago(int num, string per, Empleado* emp, Departamento* dep) {
@@ -67,7 +67,7 @@ void ComprobantePago::setEstado(string est) { estado = est; }
 
 
 
-//aca se da el salario en bruto osea al salario base se le suman las horas extra y la bonificacion 
+//aca se da el salario en bruto o sea al salario base se le suman las horas extra y la bonificacion 
 double ComprobantePago::getSalarioBruto() {
 	return salarioBase + montoHorasExtra + bonificacion;
 }

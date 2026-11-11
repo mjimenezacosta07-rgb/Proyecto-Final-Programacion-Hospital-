@@ -2,8 +2,8 @@
 #define ALMACENDEPARTAMENTOS_H
 #include "ListaDepartamentos.h"
 
-// aca se declaran pero solo para los departamentos ISP
-//es lo mismo que los almacenes empleados nadamkas que para los departamentos 
+// Aca se declaran pero solo para los departamentos ISP
+//es lo mismo que los almacenes empleados nada mas que para los departamentos 
 
 class AlmacenDepartamentos {
 public:

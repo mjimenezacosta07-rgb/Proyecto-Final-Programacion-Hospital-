@@ -3,10 +3,10 @@
 NodoPuesto :: NodoPuesto(Puesto* d) {
 	dato = d;
 	siguiente = NULL;
-	//aca seria como un vagon que al usar el constructor dato = d y siguiente = null aca un vagon nuevo no esta enganchado a nada 
+	//Aca seria como un vagon que al usar el constructor dato = d y siguiente = null aca un vagon nuevo no esta enganchado a nada 
 }
 
-//el nodo no es el que llega a borrar un dato sino que se lo encarga de borrar y se lo amnda a lista 
+//el nodo no es el que llega a borrar un dato sino que se lo encarga de borrar y se lo manda a lista 
 
 NodoPuesto::~NodoPuesto() {
 }

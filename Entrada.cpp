@@ -5,12 +5,12 @@ Entrada::Entrada() {
 
 Entrada::~Entrada() {
 }
-//esta parte le pedi ayuda a claude para que me de una guia para que no se me pasara por alto ningun dato 
-//ya que es una parte importante del sistema y no podia pasarse por alto un dato sino el sistema no iba a funcionar 
+//Esta parte le pedi ayuda a claude para que me de una guia para que no se me pasara por alto ningun dato 
+//ya que es una parte importante del sistema y no podia pasarse por alto un dato si no el sistema no iba a funcionar 
 //o la persona podria poner algo que el sistema no puede guardar y dejar de funcionar.
 
 
-//aca lee lo que se escribe en el usuario y no deja pasar datos que se pongan mal esto es importante, pro ejemplo si 
+//aca lee lo que se escribe en el usuario y no deja pasar datos que se pongan mal esto es importante, por ejemplo si 
 //escribe abc donde va un numero, muestra error y vuelve a preguntar por el dato
 
 
@@ -54,10 +54,10 @@ string Entrada::leerTexto(string mensaje) {
 
 
 
-//esta parte usa un stringstream para convertir el texto en un numero osea 
+//esta parte usa un stringstream para convertir el texto en un numero o sea 
 //el sobrante detecta lo que queda despues del numero como en 12abc o 2.5 (sobra el .5) y en esos casos el dato se rechaza 
-//ademas te da monitoreo de erores de dijitacion por ejemplo los entero sin letras 
-//ni decimales en caso de que los dijiten y ademas te dice entre cuales valores deve de estar por si no se sabe entrecuales o se dijita 
+//ademas te da monitoreo de errores de digitacion por ejemplo los entero sin letras 
+//ni decimales en caso de que los digiten y ademas te dice entre cuales valores debe de estar por si no se sabe entre cuales o se digita 
 //uno de mas 
 
 int Entrada::leerEntero(string mensaje, int minimo, int maximo) {
@@ -83,8 +83,8 @@ int Entrada::leerEntero(string mensaje, int minimo, int maximo) {
 
 
 
-//en caso de que dijite hace casi lo mismo que la anterior osea si se dijita un numero valido y osea los decimales 
-//y elk monto dice entre cuales deve de estar se usa una separada a la anterior para mayoir orden 
+//en caso de que digite hace casi lo mismo que la anterior o sea si se digita un numero valido y o sea los decimales 
+//y el monto dice entre cuales debe de estar se usa una separada a la anterior para mayor orden 
 
 double Entrada::leerDecimal(string mensaje, double minimo, double maximo) {
 	bool valido = false;
@@ -109,8 +109,8 @@ double Entrada::leerDecimal(string mensaje, double minimo, double maximo) {
 
 
 
-// aca se cubre de que los periodos de edicion osea entre cuales deve de estar cada fecha un ejemplo las fechas 
-//estan conformadas por AAAA-MM y se completa por 2026-11 oisea se usa ese tipo y se da un ejemplo en caso que la persona
+// aca se cubre de que los periodos de edicion o sea entre cuales debe de estar cada fecha un ejemplo las fechas 
+//estan conformadas por AAAA-MM y se completa por 2026-11 o sea se usa ese tipo y se da un ejemplo en caso que la persona
 //utilice un formato incorrecto a la hora de ponerlo y se usa un sistema algo mas complejo para saber esto 
 
 //la idea de esto me quede atrapado durante un rato claude me ayudo a estructurarlo ya que no entendia como hacerlo bien
@@ -141,7 +141,7 @@ string Entrada::leerPeriodo(string mensaje) {
 
 
 
-//aca se lee si hya un si o un no con S y N en caso de que no dijita ninguno o el formato incorrecto 
+//aca se lee si hay un si o un no con S y N en caso de que no digita ninguno o el formato incorrecto 
 //tira un error y le pide que vuelva a ponerlo 
 bool Entrada::leerSiNo(string mensaje) {
 	while (cin) {
@@ -160,7 +160,7 @@ bool Entrada::leerSiNo(string mensaje) {
 }
 
 
-//aca se dice para que la eprsona pueda continuar con el porgrama lñuego de iniciar los datos 
+//aca se dice para que la persona pueda continuar con el programa luego de iniciar los datos 
 void Entrada::pausar() {
 	leerLinea("\nPresione Enter para continuar...");
 }

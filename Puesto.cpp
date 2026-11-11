@@ -19,7 +19,7 @@ int Puesto::getPlazas()          { return plazas; }
 void Puesto::setPlazas(int pla)  { plazas = pla; }
 
 
-//se muestran las plazas 
+//Se muestran las plazas 
 
 string Puesto :: toString() {
 	stringstream s;

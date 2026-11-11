@@ -2,9 +2,9 @@
 #define LISTAEMPLEADOS_H
 #include "NodoEmpleado.h"
 
-//aca esta es como la estructura de nuestros datos de nuestro siguiente tren, aca el expediente de empleadis 
-//la lista es duela de los empleados osea al destruirse o al eliminar un vagon, libera la memoria 
-//asca extra se declara el hayEmpleadosEn
+//Aca esta es como la estructura de nuestros datos de nuestro siguiente tren, aca el expediente de empleados 
+//la lista es dueña de los empleados o sea al destruirse o al eliminar un vagon, libera la memoria 
+//aca extra se declara el hayEmpleadosEn
 
 
 class ListaEmpleados {

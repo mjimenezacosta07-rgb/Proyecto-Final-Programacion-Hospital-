@@ -6,12 +6,12 @@ Departamento :: Departamento( string cod, string nom) {
 	
 	codigo = cod;
 	nombre = nom;
-	puestos = new ListaPuestos(); // el todo crea su colección de partes
+	puestos = new ListaPuestos(); // El todo crea su colección de partes
 }
 
 
 
-// cuanedo 3elk departamento es eliminado sus puestos tambein 
+// cuando el departamento es eliminado sus puestos tambien 
 Departamento::~Departamento() {
 	delete puestos;
 }
@@ -20,7 +20,7 @@ string Departamento::getCodigo()         { return codigo; }
 string Departamento::getNombre()         {return nombre; }
 void Departamento::setNombre(string nom) { nombre = nom; }
 
-// el puesto se crea aqui en esta parte con el new pero nadie de afuera lo puede crear y devuelve false si ya excisyte un puesto con ese nombre 
+// el puesto se crea aqui en esta parte con el new pero nadie de afuera lo puede crear y devuelve false si ya existe un puesto con ese nombre 
 bool Departamento::agregarPuesto(string nombrePuesto, int plazas) {
 	if (puestos->buscar(nombrePuesto) != NULL) {
 		return false;

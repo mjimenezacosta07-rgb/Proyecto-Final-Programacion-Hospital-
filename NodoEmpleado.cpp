@@ -1,6 +1,6 @@
 #include "NodoEmpleado.h"
 
-//el constructor guarda al empleado y deja siguiente y null, usamos d y NULL para reducirlos en terminaciones y darles un valor 
+//El constructor guarda al empleado y deja siguiente y null, usamos d y NULL para reducirlos en terminaciones y darles un valor 
 
 NodoEmpleado :: NodoEmpleado(Empleado* d) {
 	

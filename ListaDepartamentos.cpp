@@ -5,11 +5,11 @@ ListaDepartamentos::ListaDepartamentos() {
 }
 
 
-//en esta parte de porgrama digamos como insterrat al final buscar por codigo, elimira datos, contra y mostrar datois
+//En esta parte de programa digamos como insertar al final buscar por codigo, eliminar datos, contar y mostrar datos
 //el destructor borra todos los departamentos y sus vagones
 
 
-//aca se borran los departamentos cuando se ejecuta erstoe s lo que dirijen los vagones y les dice que hacer a los nodos 
+//aca se borran los departamentos cuando se ejecuta esto es lo que dirigen los vagones y les dice que hacer a los nodos 
 ListaDepartamentos::~ListaDepartamentos() {
 	NodoDepartamento* actual = primero;
 	while (actual != NULL) {
@@ -33,7 +33,7 @@ bool ListaDepartamentos::estaVacia() {
 
 
 
-//sirve para contra cuantos hay con un sistema simple usando un puntero de actual a obtener el siguiente vagon 
+//sirve para contar cuantos hay con un sistema simple usando un puntero de actual a obtener el siguiente vagon 
 int ListaDepartamentos::contar() {
 	int cantidad = 0;
 	NodoDepartamento* actual = primero;
@@ -48,7 +48,7 @@ int ListaDepartamentos::contar() {
 
 
 //se usa un sistema simple que el ultimo vagon se cambia de usar como ultimo para poder agregar un departamento o 
-//vagon extra al tren y el vago agregado mediente un puntero y cambios se transforma en el final 
+//vagon extra al tren y el vagon agregado mediante un puntero y cambios se transforma en el final 
 void ListaDepartamentos::insertarFinal(Departamento* d) {
 	NodoDepartamento* nuevo = new NodoDepartamento(d);
 	if (primero == NULL) {
@@ -67,7 +67,7 @@ void ListaDepartamentos::insertarFinal(Departamento* d) {
 
 
 
-//esta funcion ayuda a buscra los datos entre lso vagones del tren de for4mq ordenada usando valores de igualdad y distintos punteros 
+//esta funcion ayuda a buscar los datos entre los vagones del tren de forma ordenada usando valores de igualdad y distintos punteros 
 //se usan tambien punteros que apuntan a los nodos, no a otras funciones 
 
 //los punteros apuntan a nodos y a departamentos recorre vagon por vagon y recorre el codigo y si no encuentra devuelve NULL
@@ -90,8 +90,8 @@ Departamento* ListaDepartamentos::buscar(string codigo) {
 //esta funcion lo que hace es eliminar un vagon del tren, no hay que mover ni reordenar los demas vagones como en un arreglo 
 //como funciona es que en la lista solo cambia el puntero del nodo anterior  
 //si no encuentra algo al querer eliminar devuelve 
-//false y cuandoe ncuentra algo devuelve true 
-//el vagon anterior se engancah al siguiente y ese se borra 
+//false y cuando encuentra algo devuelve true 
+//el vagon anterior se engancha al siguiente y ese se borra 
 bool ListaDepartamentos::eliminar(string codigo) {
 	NodoDepartamento* anterior = NULL;
 	NodoDepartamento* actual = primero;

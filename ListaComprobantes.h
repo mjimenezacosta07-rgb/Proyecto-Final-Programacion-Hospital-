@@ -2,9 +2,9 @@
 #define LISTACOMPROBANTES_H
 #include "NodoComprobante.h"
 
-//es la estructura de datos aca declaramos las variables  y tambien 
-//una lista de comprobantes planilla osea es duela de los comporbantes pero no los empleaod ni los departamentos 
-//a los que se pauntan sus punteros 
+//Es la estructura de datos aca declaramos las variables  y tambien 
+//una lista de comprobantes planilla o sea es dueña de los comprobantes pero no los empleado ni los departamentos 
+//a los que se apuntan sus punteros 
 
 
 class ListaComprobantes {

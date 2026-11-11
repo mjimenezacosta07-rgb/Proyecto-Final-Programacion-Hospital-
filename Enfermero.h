@@ -3,8 +3,8 @@
 #include "Empleado.h"
 
 
-//esto es una clase MODELO 
-//Enfermero es un empleado y su bonificacion sale de cunatos turnos nocturnos hizo 
+//Esto es una clase MODELO 
+//Enfermero es un empleado y su bonificacion sale de cuantos turnos nocturnos hizo 
 
 class Enfermero : public Empleado {
 private:

@@ -5,7 +5,7 @@
 
 
 
-//aca se declaran las variables private y public osea se declara por asi decirlo el vagon que vamos a usar y que guardara el ComprobantePago
+//Aca se declaran las variables private y public o sea se declara por asi decirlo el vagon que vamos a usar y que guardara el ComprobantePago
 //y el siguiente vagon 
 
 

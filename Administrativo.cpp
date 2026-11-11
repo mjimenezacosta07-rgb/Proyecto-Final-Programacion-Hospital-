@@ -1,6 +1,6 @@
 #include "Administrativo.h"
 
-// para sacar el valor de un día se divide el salario mensual entre 30
+// Para sacar el valor de un día se divide el salario mensual entre 30
 //y asi calculamos cuanto le damos de salario y ayuda a calcular el tiempo extra  
 const int DIAS_DEL_MES = 30;
 
@@ -21,7 +21,7 @@ string Administrativo::getNombreBono()             { return "feriados trabajados
 int Administrativo::getCantidadBono()              { return feriadosTrabajados; }
 void Administrativo::setCantidadBono(int cantidad) { feriadosTrabajados = cantidad; }
 
-// cada feriado trabajadose le paga con un dia de salario adicional 
+// cada feriado trabajado se le paga con un dia de salario adicional 
 // salarioBase es private en Empleado por eso usamos el get
 
 double Administrativo :: calcularBonificacion() {

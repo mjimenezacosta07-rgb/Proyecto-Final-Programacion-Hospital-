@@ -1,5 +1,5 @@
 #include "CalculadoraSalario.h"
-#include <cmath> // para round()
+#include <cmath> // Para round()
 
 // estos de aca son valores meramente de ejemplo basados en los de costa rica actualmente 
 //claude me ayudo a buscar datos ejemplo parecidos a los actuales
@@ -22,7 +22,7 @@ CalculadoraSalario::~CalculadoraSalario() {
 
 
 
-//calcula el valor por la hora osea divice el salario base de la persona por las horas laborales 
+//calcula el valor por la hora o sea divide el salario base de la persona por las horas laborales 
 
 double CalculadoraSalario::calcularValorHora(Empleado* e) {
 	return e->getSalarioBase() / HORAS_LABORALES_MES;
@@ -72,7 +72,7 @@ double CalculadoraSalario::calcularDeduccionBanco(double bruto) {
 
 
 
-//aca el dinero se maneja en centimos osea se redondea a 2 decimales para que el comrpobanre de exactamente 
+//aca el dinero se maneja en centimos o sea se redondea a 2 decimales para que el comprobante de exactamente 
 //lo mismo que antes y despues de guardarlos 
 double CalculadoraSalario::redondear(double monto) {
 	return round(monto * 100) / 100;

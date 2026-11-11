@@ -9,7 +9,7 @@ Empleado::Empleado(string ced, string nom, string codDep, double salario) {
 }
 
 Empleado::~Empleado() {
-	//no existe una memoria dinamica para liberar en esta parte
+	//No existe una memoria dinamica para liberar en esta parte
 }
 
 string Empleado::getCedula()                         { return cedula; }
@@ -26,9 +26,9 @@ void Empleado::setSalarioBase(double salario)        { salarioBase = salario; }
 void Empleado::setHorasExtra(int horas)              { horasExtra = horas; }
 
 
-//aca se arma el texto com los datos comunes y las clases hijas reutilizan el llamado a empleado::toString()
-//el stringsteam es como un cout que en cez de escribir en la pantalla escribe un texto guardado en la memnoria y si se usa cout de los << 
-// y al final el x.str nos devuelve todo el texto armado asi un empeldo no usa cout asi nos pide el profe 
+//aca se arma el texto con los datos comunes y las clases hijas reutilizan el llamado a empleado::toString()
+//el stringstream es como un cout que en vez de escribir en la pantalla escribe un texto guardado en la memoria y si se usa cout de los << 
+// y al final el x.str nos devuelve todo el texto armado asi un empleado no usa cout asi nos pide el profe 
 string Empleado::toString() {
 	stringstream s;
 	s << fixed << setprecision(2);

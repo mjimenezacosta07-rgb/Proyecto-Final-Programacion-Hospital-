@@ -2,9 +2,9 @@
 #define ALMACENEMPLEADOS_H
 #include "ListaEmpleados.h"
 
-//se declaran las clases abstractas osea se hace una persistencia que es una abstraccion 
-//clase abstracta que dice que hacer con los empleados guadados si cargar o guardar pero no como, el sistema
-//depende de esta abstracdcion y no de un archivo en concreto 
+//Se declaran las clases abstractas o sea se hace una persistencia que es una abstraccion 
+//clase abstracta que dice que hacer con los empleados guardados si cargar o guardar pero no como, el sistema
+//depende de esta abstraccion y no de un archivo en concreto 
 
 class AlmacenEmpleados {
 public:

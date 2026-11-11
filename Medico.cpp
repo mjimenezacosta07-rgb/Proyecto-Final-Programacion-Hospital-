@@ -1,14 +1,14 @@
 #include "Medico.h"
 
-//acfa se calcula el monto que va a pagarle al medico por cada guardia 
+//Aca se calcula el monto que va a pagarle al medico por cada guardia 
 const double MONTO_POR_GUARDIA = 35000;
 
 //lo primero es construir la parte del empleado y luego la del medico
 
 Medico::Medico(string ced, string nom, string codDep, double salario, string esp)
 	
-	//lista de iniciacion que significa que antes de coinstruir la del medico se ocnstruye una parte del empleado con estos datos 
-	//hace falta porque la ceduula el nombre y el salario son pribvate de empleado: y el constructor de medico no los puede
+	//lista de inicializacion que significa que antes de construir la del medico se construye una parte del empleado con estos datos 
+	//hace falta porque la cedula el nombre y el salario son private de empleado: y el constructor de medico no los puede
 	//asignar directamente 
 	: Empleado(ced, nom, codDep, salario) {
 	especialidad = esp;

@@ -2,8 +2,8 @@
 #define DEPARTAMENTO_H
 #include "ListaPuestos.h"
 
-// se incuye lista puestos.h porque le departamento tiene una lista de puestos no hace falta el puesto.h 
-//composicion: el departamento que es todo crea sus puestos osea las partes que tendra y los destrute en su destructor 
+// Se incluye lista puestos.h porque le departamento tiene una lista de puestos no hace falta el puesto.h 
+//composicion: el departamento que es todo crea sus puestos o sea las partes que tendra y los destruye en su destructor 
 //un puesto no existe fuera de el 
 
 
@@ -24,7 +24,7 @@ public:
 	
 	bool agregarPuesto(string nombrePuesto, int plazas);
 	bool eliminarPuesto(string nombrePuesto);
-	    ListaPuestos* getPuestos();   // da la loista para que otros la recorran bien porque el archivo nesecita para poder guadrar 
+	    ListaPuestos* getPuestos();   // da la lista para que otros la recorran bien porque el archivo necesita para poder guardar 
 	int totalPlazas();
 	string toString();
 };

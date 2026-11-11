@@ -1,6 +1,6 @@
 #include "ArchivoPlanilla.h"
-//aca se guarda en 13 lineas este es el mas delicado de los 3 ya que este guarda la cedula y el codigo del departamento, no punteros 
-//y al cargarbusca los objetos reales anteriormente creados 
+//Aca se guarda en 13 lineas este es el mas delicado de los 3 ya que este guarda la cedula y el codigo del departamento, no punteros 
+//y al cargar busca los objetos reales anteriormente creados 
 
 
 
@@ -75,7 +75,7 @@ void ArchivoPlanilla::cargar(ListaComprobantes* lista, ListaEmpleados* empleados
 
 
 
-// aca se recorre la lista y se escribe en el archivo cada comporbante con sus datos 
+// aca se recorre la lista y se escribe en el archivo cada comprobante con sus datos 
 void ArchivoPlanilla::guardar(ListaComprobantes* lista) {
 	ofstream archivo(nombreArchivo);
 	archivo << fixed << setprecision(2);

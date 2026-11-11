@@ -2,8 +2,8 @@
 #define NODOEMPLEADO_H
 #include "Empleado.h"
 
-// aca el nodo guarda un Empleado* ahi se usa un puntero que ese puntero apunta a un medico, un enfermero o alguien de administracion
-// por eso un alista sirve para todos 
+// Aca el nodo guarda un Empleado* ahi se usa un puntero que ese puntero apunta a un medico, un enfermero o alguien de administracion
+// por eso una lista sirve para todos 
 
 
 class NodoEmpleado {
