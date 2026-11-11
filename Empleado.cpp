@@ -40,5 +40,5 @@ string Empleado::toString() {
 	return s.str();
 }
 
-//usamos una clase abstracta ya que como empleaod no almacena datos sino que es un tipo como enfermero, medico, empleado, administratyivo
-//no tiene sentido que usemos new y ademas daria error al no almacenar nada 
+//usamos una clase abstracta porque empleado guarda los datos comunes pero tiene metodos virtuales puros que cada hija (medico, enfermero, administrativo) programa a su manera
+//por eso no se puede hacer new Empleado, daria error de compilacion, solo se hace new de las clases hijas 

@@ -68,7 +68,7 @@ void ListaDepartamentos::insertarFinal(Departamento* d) {
 
 
 //esta funcion ayuda a buscra los datos entre lso vagones del tren de for4mq ordenada usando valores de igualdad y distintos punteros 
-// se usan tambien valores que apuntanm a otras funciones 
+//se usan tambien punteros que apuntan a los nodos, no a otras funciones 
 
 //los punteros apuntan a nodos y a departamentos recorre vagon por vagon y recorre el codigo y si no encuentra devuelve NULL
 
@@ -87,9 +87,9 @@ Departamento* ListaDepartamentos::buscar(string codigo) {
 
 
 
-//esta funcion lo que hace es eliminar un vagon del trn mediante un mecanismo de remplazos tal como se hizo en porgra 1 
-//como funciona es al vagon eliminado los re ordena si eliminas uno todos los demas pasan a coupar el puesto del anterior 
-//puede ocntra como mecanismo de ordenamiento simple pero muy util para nuestro dato, si n0 encuentra algo al querer eliminar devuelve 
+//esta funcion lo que hace es eliminar un vagon del tren, no hay que mover ni reordenar los demas vagones como en un arreglo 
+//como funciona es que en la lista solo cambia el puntero del nodo anterior  
+//si no encuentra algo al querer eliminar devuelve 
 //false y cuandoe ncuentra algo devuelve true 
 //el vagon anterior se engancah al siguiente y ese se borra 
 bool ListaDepartamentos::eliminar(string codigo) {

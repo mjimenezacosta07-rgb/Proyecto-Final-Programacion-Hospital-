@@ -2,9 +2,9 @@
 
 
 
-// se programan las mismas operaciones pero por departamentos osea por cedula, ademas agregamos una nueva funcion osea un nuevo parametro 
-//el cual es hayEmpleadosEn que revisa si hay alguien en un vagon osea revisa si esta ocupado y por quien osea noi por quien peor 
-//revisa si esta ocupado 
+// se programan las mismas operaciones que en departamentos pero buscando por cedula, ademas agregamos una nueva funcion 
+//la cual es hayEmpleadosEn que recibe el codigo de un departamento y revisa si algun empleado trabaja en el 
+//solo dice si esta ocupado, no dice por quien 
 
 
 ListaEmpleados::ListaEmpleados() {
@@ -29,7 +29,7 @@ ListaEmpleados::~ListaEmpleados() {
 
 
 
-//verifica si un vagon esta vacio 
+//revisa la lista
 bool ListaEmpleados::estaVacia() {
 	return primero == NULL;
 }
@@ -68,7 +68,7 @@ void ListaEmpleados::insertarFinal(Empleado* e) {
 
 
 
-//sirve para buscar un departamento 
+//este buscar lo utilizan en los empleados 
 Empleado* ListaEmpleados::buscar(string cedula) {
 	NodoEmpleado* actual = primero;
 	while (actual != NULL) {
