@@ -1,0 +1,21 @@
+D01
+Emergencias
+2
+Médico de emergencias
+4
+Enfermero de turno
+10
+D02
+Pediatría
+2
+Médico pediatra
+3
+Enfermero pediátrico
+6
+D03
+Administración
+2
+Asistente de planillas
+2
+Recepcionista
+4

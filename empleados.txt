@@ -1,0 +1,40 @@
+MEDICO
+1-1111-1111
+Ana Rojas Mora
+D01
+1500000.00
+6
+Medicina de emergencias
+2
+ENFERMERO
+2-2222-2222
+Luis Pérez Solís
+D01
+750000.00
+0
+Emergencias
+6
+MEDICO
+3-3333-3333
+Sofía Castro Núñez
+D02
+1650000.00
+12
+Pediatría
+4
+ENFERMERO
+4-4444-4444
+Diego Vargas Quesada
+D02
+720000.00
+0
+Pediatría
+0
+ADMINISTRATIVO
+5-5555-5555
+María Jiménez Vargas
+D03
+600000.00
+0
+Recursos Humanos
+0
