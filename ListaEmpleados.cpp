@@ -2,9 +2,9 @@
 
 
 
-// Se programan las mismas operaciones que en departamentos pero buscando por cedula, ademas agregamos una nueva funcion 
-//la cual es hayEmpleadosEn que recibe el codigo de un departamento y revisa si algun empleado trabaja en el 
-//solo dice si esta ocupado, no dice por quien 
+// Se programan las mismas operaciones pero por departamentos o sea por cedula, ademas agregamos una nueva funcion o sea un nuevo parametro 
+//el cual es hayEmpleadosEn que revisa si hay alguien en un vagon o sea revisa si esta ocupado y por quien o sea no por quien pero 
+//revisa si esta ocupado 
 
 
 ListaEmpleados::ListaEmpleados() {

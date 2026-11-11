@@ -5,8 +5,8 @@
 //a los empleados, es obvio que no los va a borrar con el ejemplo que dijimos antes o sea, si borras un recibo no vas a borrar el 
 //local que te lo dio o las mismas cosas que compraste, ademas usa estos 4 metodos nuevos 
 //existeComprobante: esto evita que se haga un doble cobro al mes
-//hayComprobantesDe: dice si un empleado tiene comprobantes, para no dejar borrarlo
-//hayComprobantesEn: dice si un departamento tiene comprobantes, para no dejar borrarlo 
+//hayComprobantesDe: impide borrar a un empleado con comprobantes
+//hayComprobantesEn: Impide borrar un departamento con comprobantes 
 //mayorNumero: da el numero del comprobante siguiente 
 
 
@@ -135,7 +135,7 @@ bool ListaComprobantes::hayComprobantesDe(string cedula) {
 
 
 
-//aca esto revisa si un departamento tiene comprobantes si tiene devuelve true, el que impide borrarlo es SistemaPlanilla 
+//aca esto revisa e impide borrar un departamento que tiene comprobantes si tiene devuelve false 
 bool ListaComprobantes::hayComprobantesEn(string codigoDepartamento) {
 	NodoComprobante* actual = primero;
 	while (actual != NULL) {

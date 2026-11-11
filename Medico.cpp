@@ -7,7 +7,7 @@ const double MONTO_POR_GUARDIA = 35000;
 
 Medico::Medico(string ced, string nom, string codDep, double salario, string esp)
 	
-	//lista de inicializacion que significa que antes de construir la del medico se construye una parte del empleado con estos datos 
+	//lista de iniciacion que significa que antes de construir la del medico se construye una parte del empleado con estos datos 
 	//hace falta porque la cedula el nombre y el salario son private de empleado: y el constructor de medico no los puede
 	//asignar directamente 
 	: Empleado(ced, nom, codDep, salario) {

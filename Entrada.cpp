@@ -27,7 +27,7 @@ string Entrada::leerLinea(string mensaje) {
 
 
 
-// esta parte lo que hace es quitar los espacios del inicio y del final, ejemplo "  Ana  " queda "Ana", los de en medio no se tocan
+// esta parte lo que hace es si la persona deja un espacio al escribir ejemplo l Ana lo que hace es dejar lAna o sea quita ese espacio
 //con un sistema simple que analiza el texto 
 
 string Entrada::quitarEspacios(string texto) {
@@ -55,8 +55,8 @@ string Entrada::leerTexto(string mensaje) {
 
 
 //esta parte usa un stringstream para convertir el texto en un numero o sea 
-//el sobrante detecta lo que queda despues del numero como en 12abc o 2.5 (sobra el .5) y en esos casos el dato se rechaza 
-//ademas te da monitoreo de errores de digitacion por ejemplo los entero sin letras 
+//un sobrante detecta cosas como 12abc y lo transforma en 2,5  o sea el .5 sobra en este caso 
+//se hace con un ordenamiento que te dice ademas y te da monitoreo de errores de digitacion por ejemplo los entero sin letras 
 //ni decimales en caso de que los digiten y ademas te dice entre cuales valores debe de estar por si no se sabe entre cuales o se digita 
 //uno de mas 
 

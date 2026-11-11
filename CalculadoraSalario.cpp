@@ -30,7 +30,7 @@ double CalculadoraSalario::calcularValorHora(Empleado* e) {
 
 
 
-//aca se multiplican las horas extra, por el valor de la hora y el recargo de la hora 
+//aca se suman las horas extra, por el valor de las horas extra y el recargo de la hora 
 double CalculadoraSalario::calcularMontoHorasExtra(Empleado* e) {
 	return e->getHorasExtra() * calcularValorHora(e) * RECARGO_HORA_EXTRA;
 }

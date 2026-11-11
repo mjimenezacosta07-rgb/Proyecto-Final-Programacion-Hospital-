@@ -3,11 +3,11 @@
 #include "Empleado.h"
 #include "Departamento.h"
 
-// Este es el modelo, agregacion o sea el comprobante apunta a un empleado o sea al pasajero que va dentro de un vagon y a un Departamento
+// Este es el modelo, agregacion o sea el comprobante apunta a un empleado o sea a uno de nuestros vagones con contenido y a un Departamento
 // que existe, aca no los crean muy importante ni los borran, si un comprobante se destruye el empleado o el departamento siguen existiendo
 //es lo obvio al dar un recibo con un recibo no destruyes el establecimiento si lo botas, 
 //los montos de dinero se guardan aca para hacer el comprobante pero no cambia aunque despues se modifique el salario del Empleado
-//o sea el comprobante ya creado conserva sus montos y el salario nuevo solo se usa en los comprobantes siguientes 
+//o sea puede cambiar y no pasara nada al crear un comprobante se le agrega si se le cambia el salario 
 class ComprobantePago {
 private:
 	int           numero;

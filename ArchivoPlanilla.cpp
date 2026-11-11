@@ -1,5 +1,5 @@
 #include "ArchivoPlanilla.h"
-//Aca se guarda en 13 lineas este es el mas delicado de los 3 ya que este guarda la cedula y el codigo del departamento, no punteros 
+//Aca se guarda en 12 lineas este es el mas delicado de los 3 ya que este guarda la cedula y el codigo del departamento, no punteros 
 //y al cargar busca los objetos reales anteriormente creados 
 
 
@@ -19,7 +19,7 @@ ArchivoPlanilla::~ArchivoPlanilla() {
 
 
 
-//aca se cargan los comprobantes leyendo el archivo con getline 
+//aca se cargan los archivos mediante gets 
 void ArchivoPlanilla::cargar(ListaComprobantes* lista, ListaEmpleados* empleados,
 							 ListaDepartamentos* departamentos) {
 	ifstream archivo(nombreArchivo);
@@ -75,7 +75,7 @@ void ArchivoPlanilla::cargar(ListaComprobantes* lista, ListaEmpleados* empleados
 
 
 
-// aca se recorre la lista y se escribe en el archivo cada comprobante con sus datos 
+// aca se usan principios de plantilla para guardar los comprobantes con los datos 
 void ArchivoPlanilla::guardar(ListaComprobantes* lista) {
 	ofstream archivo(nombreArchivo);
 	archivo << fixed << setprecision(2);

@@ -3,7 +3,7 @@
 #include <fstream>
 #include "AlmacenDepartamentos.h"
 
-//Aca se declaran las variables que vamos a usar en el ArchivoDepartamentos.cpp y seguimos usando la palabra clave override
+//Aca se declaran las variables que vamos a usar en el ArchivoDepartamentos.cpp y seguimos usando el principio de override
 
 
 class ArchivoDepartamentos : public AlmacenDepartamentos {

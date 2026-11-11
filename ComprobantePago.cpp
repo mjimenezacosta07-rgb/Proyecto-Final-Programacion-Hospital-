@@ -75,7 +75,7 @@ double ComprobantePago::getSalarioBruto() {
 
 
 
-// aca se hace la deduccion de salud mas las pensiones y se le suman lo del Banco Popular  para rebajarles 
+// aca se hace la deduccion de salud mas las pensiones y se le suman lo del banco nacional  para rebajarles 
 double ComprobantePago::getTotalDeducciones() {
 	return deduccionSalud + deduccionPensiones + deduccionBanco;
 }
@@ -91,7 +91,7 @@ double ComprobantePago::getSalarioNeto() {
 
 
 
-//solo responde true si el estado es PAGADO y false si no, no paga nada; lo que se le entrega al empleado es el salario neto 
+//una vez se le pagan y se le hacen las reducciones se entrega el salario base 
 bool ComprobantePago::estaPagado() {
 	return estado == "PAGADO";
 }

@@ -68,7 +68,7 @@ void ListaDepartamentos::insertarFinal(Departamento* d) {
 
 
 //esta funcion ayuda a buscar los datos entre los vagones del tren de forma ordenada usando valores de igualdad y distintos punteros 
-//se usan tambien punteros que apuntan a los nodos, no a otras funciones 
+// se usan tambien valores que apuntan a otras funciones 
 
 //los punteros apuntan a nodos y a departamentos recorre vagon por vagon y recorre el codigo y si no encuentra devuelve NULL
 
@@ -87,9 +87,9 @@ Departamento* ListaDepartamentos::buscar(string codigo) {
 
 
 
-//esta funcion lo que hace es eliminar un vagon del tren, no hay que mover ni reordenar los demas vagones como en un arreglo 
+//esta funcion lo que hace es eliminar un vagon del tren mediante un mecanismo de remplazos tal como se hizo en progra 1 
 //como funciona es que en la lista solo cambia el puntero del nodo anterior  
-//si no encuentra algo al querer eliminar devuelve 
+//puede contar como mecanismo de ordenamiento simple pero muy util para nuestro dato, si no encuentra algo al querer eliminar devuelve 
 //false y cuando encuentra algo devuelve true 
 //el vagon anterior se engancha al siguiente y ese se borra 
 bool ListaDepartamentos::eliminar(string codigo) {

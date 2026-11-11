@@ -6,7 +6,7 @@
 #include "Enfermero.h"
 #include "Administrativo.h"
 
-//En esta parte se declaran los 3 submenus o sea los Departamento, Empleados y Planilla una funcion por cada uno y se da el INICIAR()
+//En esta parte se declaran los 4 submenus o sea los Departamento, Empleados y Planilla una funcion por cada uno y se da el INICIAR()
 //es la unica parte del programa que habla con el usuario con los cout 
 //no calcula salarios ni toca archivos, le pide a la planilla que relacione por asociacion con sistemaplanilla y con Entrada
 //los usa pero no los crea ni destruye o sea solo lee

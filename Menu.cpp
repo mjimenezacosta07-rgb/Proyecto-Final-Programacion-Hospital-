@@ -92,7 +92,7 @@ void Menu::menuDepartamentos() {
 
 
 
-//en caso de que ya exista el departamento da error y vuelve al menu 
+//en caso de que ya exista el departamento para que digite y en caso que existe da error y pregunta de nuevo 
 //si lo agrega bien le dice que se agrego correctamente 
 void Menu::agregarDepartamento() {
 	string codigo = entrada->leerTexto("Código del departamento (ej. D04): ");
@@ -135,7 +135,7 @@ void Menu::agregarPuesto() {
 
 //menu para eliminar un puesto aca se pide el codigo del departamento 
 //si no existe tira error  luego pide el nombre exacto del puesto para eliminar, esto se relaciona con el sistema de antes
-//si el puesto no existe te lo dice, aca no se revisa si tiene personas porque los empleados no guardan su puesto 
+//que si el puesto tiene personas dentro no se elimina o si no existe te lo dice todo esta cubierto bien aca 
 
 void Menu::eliminarPuesto() {
 	cout << endl << sistema->listarDepartamentos();
@@ -333,7 +333,7 @@ void Menu::eliminarEmpleado() {
 	if (e == NULL) {
 		cout << "No existe un empleado con esa cedula." << endl;
 		return;
-	}//si la persona tiene algun comprobante de pago, pendiente o pagado, te lo dice y no deja eliminarlo 
+	}//si la persona tiene un comprobante de pago pendiente te lo dice y no deja eliminarlo 
 	if (sistema->tieneComprobantes(cedula)) {
 		cout << "No se puede eliminar: tiene comprobantes de pago en la planilla." << endl;
 		return;

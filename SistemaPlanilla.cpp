@@ -32,7 +32,7 @@ SistemaPlanilla::SistemaPlanilla(AlmacenEmpleados* ae, AlmacenDepartamentos* ad,
 
 
 
-//aca se destruyen las listas en orden inverso o sea primero los comprobantes estos los que apuntan a empleado y departamentos, y despues
+//aca se destruyen las lineas en orden inverso o sea primero los comprobantes estos los que apuntan a empleado y departamentos, y despues
 //lo demas o sea los almacenes y la calculadora no se borran aca eso es en sus propios lugares 
 //y ademas no se borran aca porque los crea el main cuando se ejecuta el codigo 
 
@@ -168,7 +168,7 @@ bool SistemaPlanilla::agregarEmpleado(Empleado* e) {
 		return false; // en caso de tener una cedula repetida 
 	}
 	if (departamentos->buscar(e->getCodigoDepartamento()) == NULL) {
-		return false; // en caso de que el departamento no exista 
+		return false; // en caso de que el departamento ya exista 
 	}
 	empleados->insertarFinal(e);
 	guardarTodo();
