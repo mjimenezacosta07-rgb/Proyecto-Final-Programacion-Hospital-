@@ -3,6 +3,9 @@
 //al final se libera toda la memoria en orden inverso para limpiar el programa
 //el main crea cada pieza, las conecta y arranca en el menu principal del hospital y al final se encarga de liberar la memoria 
 
+//la mayoria de los comentarios los escribi yo con cuidado y salieron de mi
+//claude me ayudo con la ortografia y a corregir algunos conceptos para que no quedara ninguna palabra inentendible o mal
+
 #include <iostream>
 #include "ArchivoEmpleados.h"
 #include "ArchivoDepartamentos.h"
