@@ -70,4 +70,4 @@ Los datos se cargan automáticamente al iniciar y se guardan después de cada ca
 
 ## Diagrama UML
 
-La carpeta `UML` contiene el documento explicativo, el diagrama de clases y su archivo editable.
+La carpeta `UML` contiene el diagrama de clases y su archivo editable.
